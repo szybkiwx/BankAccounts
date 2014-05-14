@@ -1,0 +1,10 @@
+c:\users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\BankAccounts.exe.config
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\obj\Debug\BankAccounts.csprojResolveAssemblyReference.cache
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\BankAccounts.exe
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\BankAccounts.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\EntityFramework.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\EntityFramework.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\obj\Debug\BankAccounts.exe
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\obj\Debug\BankAccounts.pdb

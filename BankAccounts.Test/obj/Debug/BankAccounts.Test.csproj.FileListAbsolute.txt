@@ -1,0 +1,5 @@
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\BankAccounts.Test.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\BankAccounts.Test.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\obj\Debug\BankAccounts.Test.csprojResolveAssemblyReference.cache
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\obj\Debug\BankAccounts.Test.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\obj\Debug\BankAccounts.Test.pdb
