@@ -12,11 +12,17 @@ namespace BankAccounts.Data
     {
         public DbSet<CheckedBankAccount> CheckedBankAccountSet { get; set; }
         public DbSet<SavingsBankAccount> SavingsBankAccountSet { get; set; }
-        public DbSet<OperationHistory> OperationHistory { get; set; }
+        public DbSet<OperationHistory> OperationHistorySet { get; set; }
         
         public BADataContext()
             : base("BankAccounts")
         {
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+           
+            
         }
     }
 }

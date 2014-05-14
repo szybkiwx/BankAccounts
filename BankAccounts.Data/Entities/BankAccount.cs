@@ -14,6 +14,8 @@ namespace BankAccounts.Data.Entities
 
         public abstract decimal GetInterestRate();
 
+        public abstract void WithdrawMoney(decimal delta);
+
         public void DepositMoney(decimal delta)
         {
             Amount += delta;

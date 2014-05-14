@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BankAccounts.Data;
+using BankAccounts.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,13 +11,13 @@ namespace BankAccounts.Commands
 {
     public abstract class Command
     {
-        protected DbContext Context { get; set; }
+        protected BADataContext Context { get; set; }
 
-        public Command(DbContext context)
+        public Command(BADataContext context)
         {
             Context = context;
         }
 
-        public abstract void Execute(IEnumerable<string> args);
+        public abstract void Execute(BankAccount ba, string[] args);
     }
 }

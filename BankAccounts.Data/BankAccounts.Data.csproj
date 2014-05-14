@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BADataContext.cs" />
+    <Compile Include="BADataContextInitializer.cs" />
     <Compile Include="Entities\BankAccount.cs" />
     <Compile Include="Entities\CheckedBankAccount.cs" />
     <Compile Include="Entities\OperationHistory.cs" />

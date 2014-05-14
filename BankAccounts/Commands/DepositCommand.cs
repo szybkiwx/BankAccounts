@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace BankAccounts.Commands
 {
-    public class WithdrawCommand : Command
-    {
-        public WithdrawCommand(BADataContext ctx)
+    public class DepositCommand : Command
+    {  
+        public DepositCommand(BADataContext ctx)
             : base(ctx)
         {
         }
@@ -20,23 +20,23 @@ namespace BankAccounts.Commands
         {
             if (args.Length < 1)
             {
-                throw new ArgumentException("\"withdraw\" requires second argument");
+                throw new ArgumentException("\"deposit\" requires second argument");
             }
 
-            try
+            try 
             {
-                decimal amount = decimal.Parse(args[1]);
-                ba.WithdrawMoney(amount);
+                decimal amount = decimal.Parse(args[0]);
+                ba.DepositMoney(amount);
                 Context.OperationHistorySet.Add(new OperationHistory()
                 {
                     Amount = amount,
                     BankAccountId = ba.Id,
                     OperationDate = DateTime.UtcNow,
-                    OperationType = OperationType.Withdrawal
+                    OperationType = OperationType.Deposit
                 });
                 Context.SaveChanges();
             }
-            catch (FormatException)
+            catch(FormatException)
             {
                 throw new ArgumentException("Invalid amount format, please make sure the value you provided is a decimal number");
             }

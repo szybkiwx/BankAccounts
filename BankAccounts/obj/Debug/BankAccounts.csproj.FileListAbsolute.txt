@@ -8,3 +8,11 @@ C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccount
 C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\obj\Debug\BankAccounts.exe
 C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\obj\Debug\BankAccounts.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\BankAccounts.Data.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\BankAccounts.Data.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml

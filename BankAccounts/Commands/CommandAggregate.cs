@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,14 @@ namespace BankAccounts.Commands
 {
     public class CommandAggregate
     {
-        public AddCommand AddCommand { get; set; }
+        [Dependency]
+        public DepositCommand DepositCommand { get; set; }
+
+        [Dependency]
         public WithdrawCommand WithdrawCommand { get; set; }
-        public BankStatement BankStatement { get; set; }
+
+        [Dependency]
+        public BankStatementCommand BankStatementCommand { get; set; }
+
     }
 }

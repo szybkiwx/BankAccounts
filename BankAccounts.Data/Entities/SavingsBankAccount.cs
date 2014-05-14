@@ -11,6 +11,8 @@ namespace BankAccounts.Data.Entities
         private const int FirstInterestTreshold = 100000;
         private const int SecondInterestTreshold = 200000;
 
+        public int Withdrawals { get; set; }
+
         public override decimal GetInterestRate()
         {
             if (Amount < FirstInterestTreshold) 
@@ -24,6 +26,20 @@ namespace BankAccounts.Data.Entities
             }
 
             return 0.06m;
+        }
+
+        public override void WithdrawMoney(decimal delta)
+        {
+            decimal withdrawalFeePercentage = Withdrawals >= 6 ? 0.02m : 0m;
+
+            if (Amount - delta < 0)
+            {
+                throw new Exception("The withdraw amount is bigger than you account's balance");
+            }
+
+            Amount -= (1 + withdrawalFeePercentage) * delta;
+
+            Withdrawals++;
         }
     }
 }

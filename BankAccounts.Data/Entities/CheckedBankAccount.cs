@@ -12,5 +12,15 @@ namespace BankAccounts.Data.Entities
         {
             return 0.03m;
         }
+
+        public override void WithdrawMoney(decimal delta)
+        {
+            if (Amount - delta < 0)
+            {
+                throw new Exception("The withdraw amount is bigger than you accountt's balance");
+            }
+
+            Amount -= delta;
+        }
     }
 }

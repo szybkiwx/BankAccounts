@@ -10,6 +10,5 @@ namespace BankAccounts.Commands
     {
         void ProcessCommand(string command);
         void PrintCommands();
-
     }
 }

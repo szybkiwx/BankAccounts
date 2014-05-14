@@ -38,6 +38,15 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -48,18 +57,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\AddToCheckedCommand.cs" />
+    <Compile Include="Commands\DepositCommand.cs" />
+    <Compile Include="Commands\BankStatementCommand.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\CommandAggregate.cs" />
     <Compile Include="Commands\CommandException.cs" />
+    <Compile Include="Commands\CommandHelper.cs" />
     <Compile Include="Commands\CommandLineProcessor.cs" />
     <Compile Include="Commands\ICommandLineProcessor.cs" />
+    <Compile Include="Commands\WithdrawCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankAccounts.Data\BankAccounts.Data.csproj">
+      <Project>{d083ac17-f50c-4763-9e85-4d5b0f7ee50a}</Project>
+      <Name>BankAccounts.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
