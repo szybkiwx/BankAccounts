@@ -25,19 +25,26 @@ namespace BankAccounts
             do
             {
                 input = Console.ReadLine();
-                if (input.StartsWith("?"))
+                if (!string.IsNullOrWhiteSpace(input))
                 {
-                    PrintHelp();
-                }
-                else
-                {
-                    try
+                    if (input.StartsWith("?"))
                     {
-                        processor.ProcessCommand(input);
+                        PrintHelp();
                     }
-                    catch (Exception e)
+                    else
                     {
-                        Console.WriteLine(e.Message);
+                        try
+                        {
+                            processor.ProcessCommand(input);
+                        }
+                        catch (CommandException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("operation unsuccessful");
+                        }
                     }
                 }
             }
@@ -49,7 +56,8 @@ namespace BankAccounts
             Console.WriteLine("List of commands:\n" +
                 "* deposit <account_type> <amount> - increments balance by the value of amount of account_type\n"+
                 "* withdraw <account_type> <amount> - decreases balance by the value of amount of account_type\n"+
-                "* statement <account_type> show account_type statement");
+                "* statement <account_type> <date_from> <date_to> show account_type statement from period <date_from>:<date_to>. Format ofthe date should be YYYY-MM-DD HH:mm:ss, e.g. \"2011-03-21 13:26:21\" \n" +
+                "* exit - quits the program");
         }
 
         static void Bootstrap()

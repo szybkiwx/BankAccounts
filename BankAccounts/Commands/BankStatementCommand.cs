@@ -18,7 +18,26 @@ namespace BankAccounts.Commands
 
         public override void Execute(BankAccount ba, string[] args)
         {
-            var history = Context.OperationHistorySet.AsEnumerable();
+            if (args.Length < 2)
+            {
+                throw new ArgumentException("\"statement \" requires two arguments");
+            }
+
+
+            DateTime dateFrom;
+            DateTime dateTo;
+
+            try
+            {
+                dateFrom = DateTime.Parse(args[0]);
+                dateTo = DateTime.Parse(args[1]);
+            }
+            catch (FormatException)
+            {
+                throw new ArgumentException("Invalid date format");
+            }
+
+            var history = Context.OperationHistorySet.Where(x => x.OperationDate >= dateFrom && x.OperationDate < dateTo).AsEnumerable();
             string text = history.Aggregate<OperationHistory, string>(
                 string.Empty,
                 (string total, OperationHistory next) =>
@@ -28,6 +47,7 @@ namespace BankAccounts.Commands
                 });
 
             Console.WriteLine("Account statement: \n");
+            Console.WriteLine(string.Format("Balance: {0}\n", ba.Amount));
             Console.WriteLine(text);
         }
     }

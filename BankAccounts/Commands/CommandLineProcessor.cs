@@ -28,18 +28,33 @@ namespace BankAccounts.Commands
         public void ProcessCommand(string commandString)
         {
             var tokens = commandString.Split(new[] { ' ' }).Select(x => x.Trim()).ToArray();
-            var command = tokens.First();
-            string type = tokens[1];
-            var ba = _commandHelper.GetAccountByType(type);
-
-            var args = tokens.Skip(2).ToArray();
-            if (_commands.ContainsKey(command))
+            if (tokens.Length < 3)
             {
-                _commands[command].Execute(ba, args);
+                throw new CommandException("Not enough arguments");
+            }
+
+            var commandName = tokens.First();
+            
+            
+            if (_commands.ContainsKey(commandName))
+            {
+                try
+                {
+                    var command = _commands[commandName];
+                    string type = tokens[1];
+                    var ba = _commandHelper.GetAccountByType(type);
+
+                    var args = tokens.Skip(2).ToArray();
+                    command.Execute(ba, args);
+                }
+                catch (ArgumentException e)
+                {
+                    throw new CommandException(e.Message);
+                }
             }
             else
             {
-                throw new Exception(string.Format("Invalid command {0}", command));
+                throw new CommandException(string.Format("Invalid command {0}", commandName));
             }
         }
 

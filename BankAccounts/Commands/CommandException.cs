@@ -11,5 +11,9 @@ namespace BankAccounts.Commands
         public CommandException(string msg) : base(msg)
         {
         }
+
+        public CommandException(string msg, Exception inner) : base(msg, inner)
+        {
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace BankAccounts.Commands
                 case "savings":
                     return _context.SavingsBankAccountSet.First();
                 default:
-                    throw new ArgumentException(string.Format("Invalid account type: {0}. Please provide one of the following: checked, savings"));
+                    throw new CommandException(string.Format("Invalid account type: {0}. Please provide one of the following: checked, savings"));
             }
         }
     }
