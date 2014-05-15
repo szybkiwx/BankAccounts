@@ -23,23 +23,34 @@ namespace BankAccounts.Commands
                 throw new ArgumentException("\"withdraw\" requires second argument");
             }
 
+            decimal amount;
             try
             {
-                decimal amount = decimal.Parse(args[1]);
-                ba.WithdrawMoney(amount);
-                Context.OperationHistorySet.Add(new OperationHistory()
-                {
-                    Amount = amount,
-                    BankAccountId = ba.Id,
-                    OperationDate = DateTime.UtcNow,
-                    OperationType = OperationType.Withdrawal
-                });
-                Context.SaveChanges();
+                amount = decimal.Parse(args[0]);
             }
             catch (FormatException)
             {
                 throw new ArgumentException("Invalid amount format, please make sure the value you provided is a decimal number");
             }
+
+            try
+            {
+                ba.WithdrawMoney(amount);
+            }
+            catch (Exception e)
+            {
+                throw new CommandException(e.Message);
+            }
+
+            Context.OperationHistorySet.Add(new OperationHistory()
+            {
+                Amount = amount,
+                BankAccountId = ba.Id,
+                OperationDate = DateTime.UtcNow,
+                OperationType = OperationType.Withdrawal
+            });
+    
+            Context.SaveChanges();
         }
     }
 }
