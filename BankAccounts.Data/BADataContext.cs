@@ -21,8 +21,9 @@ namespace BankAccounts.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-           
-            
+            modelBuilder.Entity<SavingsBankAccount>().Property(q => q.Amount).HasPrecision(18, 10);
+            modelBuilder.Entity<CheckedBankAccount>().Property(q => q.Amount).HasPrecision(18, 10);
+            modelBuilder.Entity<OperationHistory>().Property(q => q.Amount).HasPrecision(18, 10);
         }
     }
 }

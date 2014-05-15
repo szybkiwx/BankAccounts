@@ -11,9 +11,17 @@ namespace BankAccounts.Commands
 {
     public class BankStatementCommand : Command
     {
+        private Dictionary<OperationType, string> _operationNameMap;
+
         public BankStatementCommand(BADataContext ctx)
             : base(ctx)
         {
+            _operationNameMap = new Dictionary<OperationType, string>()
+            {
+                {OperationType.Deposit, "deposit"},
+                {OperationType.Interests, "interests"},
+                {OperationType.Withdrawal, "withdrawal"}
+            };
         }
 
         public override void Execute(BankAccount ba, string[] args)
@@ -40,11 +48,8 @@ namespace BankAccounts.Commands
             var history = Context.OperationHistorySet.Where(x => x.OperationDate >= dateFrom && x.OperationDate < dateTo).AsEnumerable();
             string text = history.Aggregate<OperationHistory, string>(
                 string.Empty,
-                (string total, OperationHistory next) =>
-                {
-                    string type = next.OperationType == OperationType.Deposit ? "deposit" : "withdrawal";
-                    return total + string.Format("{0}. {1} - {2}\n", next.OperationDate, type, next.BankAccount.Amount);
-                });
+                (string total, OperationHistory next) =>  total + string.Format("{0}. {1} - {2}\n", next.OperationDate, _operationNameMap[next.OperationType], next.BankAccount.Amount)
+                );
 
             Console.WriteLine("Account statement: \n");
             Console.WriteLine(string.Format("Balance: {0}\n", ba.Amount));

@@ -10,7 +10,8 @@ namespace BankAccounts.Data.Entities
     public enum OperationType 
     {
         Deposit, 
-        Withdrawal
+        Withdrawal,
+        Interests
     }
 
     public class OperationHistory

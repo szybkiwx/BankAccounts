@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BankAccounts
@@ -18,6 +19,10 @@ namespace BankAccounts
         {
             Bootstrap();
             var processor = _container.Resolve<ICommandLineProcessor>();
+            var interestUpdate = _container.Resolve<IInterestUpdateService>();
+
+            var interestThread = new Thread(interestUpdate.Run);
+            interestThread.Start();
             string input;
 
             Console.WriteLine("Welcome to your banking software. Please enter appropriate command. Enter '?' to print help");
@@ -49,6 +54,7 @@ namespace BankAccounts
                 }
             }
             while (!input.StartsWith("exit"));
+            interestUpdate.Stop();
         }
 
         private static void PrintHelp()
@@ -72,6 +78,8 @@ namespace BankAccounts
             _container.RegisterType<ICommandLineProcessor, CommandLineProcessor>();
             _container.RegisterType<DepositCommand>();
             _container.RegisterType<BADataContext>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IInterestUpdateService, InterestUpdateService>();
+            
          }
     }
 }

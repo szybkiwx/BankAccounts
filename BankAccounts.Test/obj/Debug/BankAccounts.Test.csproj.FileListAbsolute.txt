@@ -3,3 +3,16 @@ C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccount
 C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\obj\Debug\BankAccounts.Test.csprojResolveAssemblyReference.cache
 C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\obj\Debug\BankAccounts.Test.dll
 C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\obj\Debug\BankAccounts.Test.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\BankAccounts.Test.dll.config
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\BankAccounts.Data.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\BankAccounts.exe
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\EntityFramework.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\Moq.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\BankAccounts.Data.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\BankAccounts.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\EntityFramework.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\Moq.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Test\bin\Debug\Microsoft.Practices.Unity.xml
