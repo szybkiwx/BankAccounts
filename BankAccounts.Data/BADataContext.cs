@@ -10,9 +10,9 @@ namespace BankAccounts.Data
 {
     public class BADataContext : DbContext
     {
-        public DbSet<CheckedBankAccount> CheckedBankAccountSet { get; set; }
-        public DbSet<SavingsBankAccount> SavingsBankAccountSet { get; set; }
-        public DbSet<OperationHistory> OperationHistorySet { get; set; }
+        public virtual IDbSet<CheckedBankAccount> CheckedBankAccountSet { get; set; }
+        public virtual IDbSet<SavingsBankAccount> SavingsBankAccountSet { get; set; }
+        public virtual IDbSet<OperationHistory> OperationHistorySet { get; set; }
         
         public BADataContext()
             : base("BankAccounts")

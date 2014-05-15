@@ -41,14 +41,16 @@ namespace BankAccounts
                         try
                         {
                             processor.ProcessCommand(input);
+                            Console.WriteLine("operation successful\n");
                         }
                         catch (CommandException e)
                         {
                             Console.WriteLine(e.Message);
+                            Console.WriteLine();
                         }
                         catch (Exception)
                         {
-                            Console.WriteLine("operation unsuccessful");
+                            Console.WriteLine("operation unsuccessful\n");
                         }
                     }
                 }
