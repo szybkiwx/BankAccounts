@@ -1,0 +1,9 @@
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\bin\Release\BankAccounts.Data.dll.config
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\bin\Release\BankAccounts.Data.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\bin\Release\BankAccounts.Data.pdb
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\bin\Release\EntityFramework.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\bin\Release\EntityFramework.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\obj\Release\BankAccounts.Data.dll
+C:\Users\andrzejd\documents\visual studio 2013\Projects\BankAccounts\BankAccounts.Data\obj\Release\BankAccounts.Data.pdb

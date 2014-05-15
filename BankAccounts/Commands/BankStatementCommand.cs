@@ -48,7 +48,7 @@ namespace BankAccounts.Commands
             var history = Context.OperationHistorySet.Where(x => x.OperationDate >= dateFrom && x.OperationDate < dateTo).AsEnumerable();
             string text = history.Aggregate<OperationHistory, string>(
                 string.Empty,
-                (string total, OperationHistory next) =>  total + string.Format("{0}. {1} - {2}\n", next.OperationDate, _operationNameMap[next.OperationType], next.BankAccount.Amount)
+                (string total, OperationHistory next) =>  total + string.Format("{0}: {1} - {2}\n", next.OperationDate, _operationNameMap[next.OperationType], next.Amount)
                 );
 
             Console.WriteLine("Account statement: \n");
